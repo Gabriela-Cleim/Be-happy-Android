@@ -7,24 +7,22 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class Telacinco extends AppCompatActivity {
-    Button bt_proxi;
+public class Telaseis extends AppCompatActivity {
 
+    Button bt_voltar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_telacinco);
+        setContentView(R.layout.activity_telaseis);
 
-        bt_proxi=findViewById(R.id.bt_proxi);
+        bt_voltar=findViewById(R.id.bt_voltar);
 
-        bt_proxi.setOnClickListener(new View.OnClickListener() {
+        bt_voltar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent Telaseis=new Intent(view.getContext(), Telaseis.class);
-                startActivity(Telaseis);
+                Intent Teladois=new Intent(view.getContext(), Teladois.class);
+                startActivity(Teladois);
             }
         });
-
-
     }
 }

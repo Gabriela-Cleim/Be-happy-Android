@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BeHappy">
         <activity
+            android:name=".Telaseis"
+            android:exported="false" />
+        <activity
             android:name=".Telacinco"
             android:exported="false" />
         <activity
