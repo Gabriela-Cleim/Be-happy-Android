@@ -35,16 +35,27 @@ public class ChatRVAdapter extends RecyclerView.Adapter {
                 view = LayoutInflater.from(parent.getContext()).inflate(R.layout.bot_msg_rv_item,parent,false);
                         return new BotViewHolder(view);
         }
+        return null;
     }
 
     @Override
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
+        ChatsModal chatsModal = chatsModalArrayList.get(position);
+        switch (chatsModal.getSender()){
+            case "user":
+                ((UserViewHolder)holder).userTV.setText(chatsModal.getMessage());
+                break;
+
+            case "bot":
+                ((BotViewHolder)holder).botMsgTV.setText(chatsModal.getMessage());
+                break;
+        }
 
     }
 
     @Override
     public int getItemCount() {
-        return 0;
+        return chatsModalArrayList.size();
     }
 
     public static class UserViewHolder extends RecyclerView.ViewHolder{
