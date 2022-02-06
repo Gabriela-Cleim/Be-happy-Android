@@ -13,6 +13,7 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
 
+import retrofit2.Call;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
@@ -61,6 +62,8 @@ public class chatbot extends AppCompatActivity {
                 .baseUrl(BASE_URL)
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
-
+        RetrofiAPI retrofiAPI = retrofit.create(RetrofiAPI.class);
+        Call<MsgModal> call = retrofiAPI.getMessage(url);
+        call.equals(new call<MsgModal>() {})
     }
 }
