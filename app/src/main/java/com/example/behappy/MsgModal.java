@@ -3,7 +3,7 @@ package com.example.behappy;
 public class MsgModal {
     private String cnt;
 
-    public String getCnt() {
+    public String getcnt() {
         return cnt;
     }
 

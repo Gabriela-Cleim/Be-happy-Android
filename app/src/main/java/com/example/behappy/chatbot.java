@@ -71,7 +71,7 @@ public class chatbot extends AppCompatActivity {
             public void onResponse(Call<MsgModal> call, Response<MsgModal> response) {
                 if(response.isSuccessful()){
                     MsgModal modal = response.body();
-                    chatsModalArrayList.add(new ChatsModal(modal.getCnt(),BOT_KEY));
+                    chatsModalArrayList.add(new ChatsModal(modal.getcnt(),BOT_KEY));
                     chatRVAdapter.notifyDataSetChanged();
                 }
 
@@ -79,6 +79,8 @@ public class chatbot extends AppCompatActivity {
 
             @Override
             public void onFailure(Call<MsgModal> call, Throwable t) {
+                chatsModalArrayList.add(new ChatsModal("Refaça a sua pergunta, por favor!", BOT_KEY));
+                chatRVAdapter.notifyDataSetChanged();
 
             }
         });
