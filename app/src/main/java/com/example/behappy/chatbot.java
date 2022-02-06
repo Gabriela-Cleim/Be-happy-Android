@@ -64,8 +64,8 @@ public class chatbot extends AppCompatActivity {
                 .baseUrl(BASE_URL)
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
-        RetrofiAPI retrofiAPI = retrofit.create(RetrofiAPI.class);
-        Call<MsgModal> call = retrofiAPI.getMessage(url);
+        RetrofitAPI retrofitAPI = retrofit.create(RetrofitAPI.class);
+        Call<MsgModal> call = retrofitAPI.getMessage(url);
         call.enqueue(new Callback<MsgModal>() {
             @Override
             public void onResponse(Call<MsgModal> call, Response<MsgModal> response) {

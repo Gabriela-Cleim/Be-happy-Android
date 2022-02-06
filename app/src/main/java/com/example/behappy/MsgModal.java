@@ -7,7 +7,7 @@ public class MsgModal {
         return cnt;
     }
 
-    public void setCnt(String cnt) {
+    public void setcnt(String cnt) {
         this.cnt = cnt;
     }
 
