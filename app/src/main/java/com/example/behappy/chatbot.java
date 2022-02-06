@@ -69,7 +69,12 @@ public class chatbot extends AppCompatActivity {
         call.enqueue(new Callback<MsgModal>() {
             @Override
             public void onResponse(Call<MsgModal> call, Response<MsgModal> response) {
-                
+                if(response.isSuccessful()){
+                    MsgModal modal = response.body();
+                    chatsModalArrayList.add(new ChatsModal(modal.getCnt(),BOT_KEY));
+                    chatRVAdapter.notifyDataSetChanged();
+                }
+
             }
 
             @Override
