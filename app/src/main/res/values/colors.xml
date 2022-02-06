@@ -9,4 +9,5 @@
     <color name="white">#FFFFFFFF</color>
     <color name="fundo">#FFDE59</color>
     <color name="barra">#FFDE80</color>
+    <color name="fundobot">#FFCF01</color>
 </resources>
