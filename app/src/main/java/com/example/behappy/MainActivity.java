@@ -39,9 +39,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Toast.makeText(getApplicationContext(), "Você pode encontrar ajuda no chatbot sobre qualquer assunto!",Toast.LENGTH_LONG).show();
+                openDialog();
             }
         });
-
+    }
+    public void openDialog(){
+        ExampleDialog exampleDialog = new ExampleDialog();
+        exampleDialog.show(getSupportFragmentManager(), "Help");
 
     }
 
